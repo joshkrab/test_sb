@@ -1,0 +1,236 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1280;
+// $md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	font-family: "Inter", sans-serif;
+	color: #000;
+	font-size: 14px;
+	// &.lock {
+	// 	overflow: hidden;
+	// }
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	// overflow: hidden;
+	// &.loaded {
+	// }
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	// @media (max-width: $md1+px) {
+	// 	max-width: 1280px;
+	// }
+	// @media (max-width: $md2+px) {
+	// 	max-width: 100%;
+	// }
+	// @media (max-width: $md3+px) {
+	// 	max-width: none;
+	// 	padding: 0 10px;
+	// }
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+@import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.first-section {
+	padding: 150px 0px 0px 0px;
+	.container {
+		background-color: rgb(247, 180, 180);
+		height: 500px;
+	}
+}
+.second-section {
+	.container {
+		background-color: rgb(180, 247, 197);
+		height: 500px;
+	}
+}
+
+//====================================================================================================
+.popup1 {
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 460px;
+	background-color: #fff;
+	padding: 20px 50px 50px;
+	&__header {
+		@include flexbox();
+		justify-content: space-between;
+		font-size: 16px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+	}
+
+	&__close {
+		width: 20px;
+		height: 20px;
+		&:hover {
+			.popup1__close-item::after,
+			.popup1__close-item::before {
+				background-color: orange;
+			}
+		}
+	}
+	&__cards {
+	}
+
+	&__sub-total {
+		@include flexbox();
+		justify-content: space-between;
+		font-size: 16px;
+		font-weight: 500;
+		color: #666666;
+	}
+
+	&__total {
+		@include flexbox();
+		justify-content: space-between;
+		font-size: 16px;
+		font-weight: 500;
+		color: #666666;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__buttons {
+		width: 100%;
+		@include flexbox();
+		justify-content: space-between;
+		a {
+			display: inline-block;
+		}
+	}
+
+	&__close-item {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		&:before {
+			content: "";
+			height: 2px;
+			width: 10px;
+			background-color: #000;
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			content: "";
+			height: 2px;
+			width: 10px;
+			background-color: #000;
+			position: absolute;
+			top: 10px;
+			left: 5px;
+			transform: rotate(-45deg);
+		}
+	}
+
+	.pop-card {
+		width: 100%;
+		&__item {
+			width: 100%;
+			height: 70px;
+			border: 2px solid #ebebeb;
+			border-radius: 12px;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	.quick {
+		font-size: 16px;
+		font-weight: 600;
+		color: #000;
+		border: 1px solid black;
+		border-radius: 20px;
+		padding: 10px 30px;
+		&:hover {
+			color: orange;
+		}
+	}
+	.regular {
+		font-size: 16px;
+		font-weight: 600;
+		color: rgb(255, 255, 255);
+		background-color: black;
+		border: 1px solid black;
+		border-radius: 20px;
+		padding: 10px 30px;
+		&:hover {
+			color: orange;
+		}
+	}
+	.line {
+		height: 1px;
+		width: 100%;
+		background-color: #ebebeb;
+		margin: 5px 0;
+	}
+}
+
+.popup1.open {
+	display: block;
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
