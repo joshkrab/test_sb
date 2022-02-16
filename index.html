@@ -27,15 +27,25 @@
             </a>
          </div>
          <nav class="nav__menu nav">
-            <ul class="nav__list">
+            <ul class="nav__list show1">
                <li>
                   <a href="#" class="nav__link">Stock</a>
                </li>
                <li>
                   <a href="#" class="nav__link">About Us </a>
                </li>
-               <li>
+               <li class="nav__hide">
                   <a href="#" class="nav__link">Contacts</a>
+               </li>
+               <li class="nav__show">
+                  <div class="con-wrap">
+                     <img src="img/Group.svg" alt="" />
+                     <a href="#" class="nav__link">Catalog</a>
+                     <div class="arrow-1"></div>
+                     <div class="nav__close">
+                        <div class="nav__close-item"></div>
+                     </div>
+                  </div>
                </li>
                <li>
                   <a href="#" class="nav__link">Ask a Question</a>
@@ -50,25 +60,10 @@
          </nav>
       </div>
    </div>
+
    <div class="header__sticky">
       <div class="container">
          <div class="header__row">
-            <!-- 
-				html меню с иконкой бургера
-				<div class="header__menu menu">
-					<div class="menu__icon icon-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li><a href="" class="menu__link"></a></li>
-						</ul>
-					</nav>
-				</div>
-			-->
-
             <div class="header__catalog catalog">
                <div class="catalog__head">
                   <div class="catalog__logo">
@@ -454,6 +449,13 @@
                         </li>
                      </ul>
                   </li>
+                  <li>
+                     <div class="touch-title">
+                        <p>Catalog</p>
+                     </div>
+
+                     <div class="arrow-back"></div>
+                  </li>
                </ul>
             </div>
             <div class="header__input">
@@ -464,6 +466,13 @@
             </div>
          </div>
       </div>
+   </div>
+
+   <div class="header__burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
    </div>
 </header>
          <!-- First section -->
