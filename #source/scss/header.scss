@@ -1,5 +1,8 @@
 //====================================================================================================
 .header {
+	.catalog__list.sub2 {
+		display: none;
+	}
 	padding: 0px 10px;
 	&__nav {
 		height: 80px;
@@ -393,7 +396,7 @@
 		position: fixed;
 		top: 15px;
 		right: 20px;
-		z-index: 15;
+		z-index: 10;
 		width: 20px;
 		height: 20px;
 		&-item {
@@ -424,6 +427,7 @@
 	}
 	.global__close.show {
 		display: block;
+		z-index: 20;
 	}
 
 	.con-wrap {
@@ -517,6 +521,9 @@
 		}
 
 		&__list {
+			a {
+				pointer-events: none;
+			}
 			display: none;
 			position: fixed;
 			top: 0;
@@ -538,15 +545,25 @@
 				z-index: 28;
 			}
 		}
+
+		&__item:hover {
+			.sub-list {
+				display: none;
+			}
+		}
 	}
 
 	.catalog__list.show2 {
 		display: block;
 		overflow: auto;
+		z-index: 16;
+		// &::before {
+		// 	z-index: 34;
+		// }
 	}
 
 	.sticky-index {
-		z-index: 17;
+		z-index: 44;
 	}
 
 	.catalog:hover .catalog__list {
@@ -588,4 +605,12 @@
 	body.scroll {
 		overflow: hidden;
 	}
+}
+
+.hiddenx {
+	display: none;
+}
+
+.catalog__list.sub2.show2 {
+	display: block;
 }
