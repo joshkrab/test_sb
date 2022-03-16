@@ -990,15 +990,15 @@ body.ie .ibg img {
 	display: none;
 	position: fixed;
 	z-index: 14;
-	top: 21px;
-	left: 17px;
+	top: 20px;
+	left: 19px;
 }
 .header__burger span {
 	display: block;
-	width: 16px;
+	width: 20px;
 	height: 2px;
 	background-color: #000;
-	margin: 0px 0px 2px 0px;
+	margin: 0px 0px 3px 0px;
 }
 
 .catalog {
@@ -1233,11 +1233,11 @@ body.ie .ibg img {
 	.global__close {
 		display: none;
 		position: fixed;
-		top: 15px;
-		right: 20px;
+		top: 12px;
+		right: 18px;
 		z-index: 10;
-		width: 20px;
-		height: 20px;
+		width: 30px;
+		height: 30px;
 	}
 	.global__close-item {
 		position: relative;
@@ -1247,7 +1247,7 @@ body.ie .ibg img {
 	.global__close-item:before {
 		content: "";
 		height: 2px;
-		width: 20px;
+		width: 30px;
 		background-color: #000;
 		position: absolute;
 		top: 50%;
@@ -1259,7 +1259,7 @@ body.ie .ibg img {
 	.global__close-item::after {
 		content: "";
 		height: 2px;
-		width: 20px;
+		width: 30px;
 		background-color: #000;
 		position: absolute;
 		top: 50%;
@@ -1294,15 +1294,15 @@ body.ie .ibg img {
 	.header__links {
 		text-align: right;
 		-webkit-box-flex: 1;
-		    -ms-flex: 1 1 40%;
-		        flex: 1 1 40%;
+		    -ms-flex: 1 1 52%;
+		        flex: 1 1 52%;
 	}
 	.header__links a {
-		font-size: 10px;
+		font-size: 14px;
 		font-weight: 700;
 		border: 2px solid orange;
 		border-radius: 6px;
-		padding: 6px;
+		padding: 4px;
 		color: black;
 	}
 	.header__links a:hover {
@@ -1343,7 +1343,7 @@ body.ie .ibg img {
 		height: 30px;
 		width: 100%;
 		border-radius: 7px;
-		padding: 0px 0px 0px 25px;
+		padding: 0px 0px 0px 15px;
 	}
 	.header__input input::-webkit-input-placeholder {
 		font-size: 12px;
@@ -1362,7 +1362,7 @@ body.ie .ibg img {
 	}
 
 	.catalog {
-		width: 290px;
+		width: 330px;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 1 auto;
 		        flex: 1 1 auto;
@@ -1371,8 +1371,8 @@ body.ie .ibg img {
 		display: block;
 		padding: 0;
 		margin: 0;
-		width: 30px;
-		height: 30px;
+		width: 38px;
+		height: 38px;
 		border-radius: 5px;
 	}
 	.catalog__logo, .catalog__title,
@@ -1444,12 +1444,12 @@ body.ie .ibg img {
 		display: none;
 		width: 0;
 		height: 0;
-		border-right: 10px solid black;
-		border-top: 10px solid transparent;
-		border-bottom: 10px solid transparent;
+		border-right: 18px solid black;
+		border-top: 18px solid transparent;
+		border-bottom: 15px solid transparent;
 		position: fixed;
-		top: 16px;
-		left: 18px;
+		top: 12px;
+		left: 12px;
 		z-index: 29;
 	}
 
@@ -1585,7 +1585,7 @@ body.ie .ibg img {
 .popup1__close-item:before {
 	content: "";
 	height: 2px;
-	width: 10px;
+	width: 14px;
 	background-color: #000;
 	position: absolute;
 	top: 10px;
@@ -1597,7 +1597,7 @@ body.ie .ibg img {
 .popup1__close-item::after {
 	content: "";
 	height: 2px;
-	width: 10px;
+	width: 14px;
 	background-color: #000;
 	position: absolute;
 	top: 10px;
@@ -1724,7 +1724,7 @@ body.ie .ibg img {
 	.popup1__close-item:before {
 		content: "";
 		height: 2px;
-		width: 20px;
+		width: 22px;
 		background-color: #000;
 		position: absolute;
 		top: 15px;
@@ -1736,7 +1736,7 @@ body.ie .ibg img {
 	.popup1__close-item::after {
 		content: "";
 		height: 2px;
-		width: 20px;
+		width: 22px;
 		background-color: #000;
 		position: absolute;
 		top: 15px;
